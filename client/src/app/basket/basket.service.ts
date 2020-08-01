@@ -1,4 +1,3 @@
-import { BasketService } from 'src/app/basket/basket.service';
 import { IBasketItem, Basket, IBasketTotals } from './../shared/models/basket';
 import { IProduct } from 'src/app/shared/models/product';
 import { HttpClient } from '@angular/common/http';
