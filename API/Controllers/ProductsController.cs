@@ -41,7 +41,7 @@ namespace API.Controllers
 
             var totalItems = await _productsRepo.CountAsync(countSpec);
 
-            var products = await _productsRepo.ListAllAsync(spec);
+            var products = await _productsRepo.ListAsync(spec);
 
             var data = _mapper.Map<IReadOnlyList<Product>, IReadOnlyList<ProductToReturnDto>>(products);
 
