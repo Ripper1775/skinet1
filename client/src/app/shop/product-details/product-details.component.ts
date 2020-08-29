@@ -14,7 +14,7 @@ export class ProductDetailsComponent implements OnInit {
   product: IProduct;
   quantity = 1;
 
-  constructor(private shopService: ShopService, 
+  constructor(private shopService: ShopService,
               private activeRoute: ActivatedRoute,
               private bcService: BreadcrumbService,
               private basketServices: BasketService) {

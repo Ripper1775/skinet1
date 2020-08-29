@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="table-responsive">
+      <table class="table table-hover" style="cursor: pointer;">
+        <thead>
+          <tr>
+            <th class="border-0 bg-light" scope="col">
+              <div class="test-uppercase">Order</div>
+            </th>
+            <th class="border-0 bg-light" scope="col">
+              <div class="test-uppercase">Date</div>
+            </th>
+            <th class="border-0 bg-light" scope="col">
+              <div class="test-uppercase">Total</div>
+            </th>
+            <th class="border-0 bg-light" scope="col">
+              <div class="test-uppercase">Status</div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>            
+            <tr *ngFor="let order of orders" routerLink="/orders/{{order.id}}">
+                <td class="align-middle">
+                  <strong># {{order.id}}</strong>
+                </td>
+                <td class="align-middle">
+                  <strong>{{order.orderDate | date: 'medium'}}</strong>
+                </td>
+                <td class="align-middle">
+                  <strong>{{order.total | currency}}</strong>
+                </td>
+                <td class="align-middle">
+                  <strong>{{order.status}}</strong>
+                </td>
+              </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
